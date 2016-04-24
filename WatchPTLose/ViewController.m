@@ -6,6 +6,7 @@
 #import <Underscore.m/Underscore.h>
 #import "PTService.h"
 #import "ThemeService.h"
+#import <FontAwesomeKit/FontAwesomeKit.h>
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
     NSArray<UIButton*> *_bottomButtons;
     
     UIImageView *_stateImageView;
+    UIImageView *_tempImageView;
     UILabel *_winLossLabel;
     
     PTService *_service;
@@ -29,7 +31,9 @@
     self = [super init];
     _service = [PTService sharedInstance];
     _theme = [ThemeService sharedInstance];
-    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"gambling" image:nil tag:0];
+    FAKIcon *icon = [FAKFontAwesome dollarIconWithSize:24];
+    UIImage *image = [icon imageWithSize:CGSizeMake(30, 30)];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"gambling" image:image tag:0];
     return self;
 }
 
@@ -71,6 +75,10 @@
     _stateImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:_stateImageView];
     
+    _tempImageView = [[UIImageView alloc] init];
+    _tempImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:_tempImageView];
+    
     _winLossLabel = [[UILabel alloc] init];
     _winLossLabel.font = [UIFont boldSystemFontOfSize:24];
     [self.view addSubview:_winLossLabel];
@@ -106,9 +114,15 @@
         make.bottom.equalTo(_winLossLabel.mas_top);
     }];
     
+    [_tempImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_topStack.mas_bottom);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(_winLossLabel.mas_top);
+    }];
+    
     [_winLossLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.bottom.equalTo(_bottomStack.mas_top).with.offset(-40);
+        make.bottom.equalTo(_bottomStack.mas_top).with.offset(-10);
         make.height.equalTo(@40);
     }];
 }
@@ -122,10 +136,23 @@
 
 - (void)winPressed:(UIButton *)sender {
     [_service addWin:sender.tag];
+    [self showTempImage:sender.tag];
 }
 
 - (void)losePressed:(UIButton *)sender {
     [_service addWin:-sender.tag];
+    [self showTempImage:-sender.tag];
+}
+
+- (void)showTempImage:(NSInteger)amount {
+    _tempImageView.alpha = 1;
+    _tempImageView.image = [_service instantImageForAmount:amount];
+    _stateImageView.alpha = 0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.6 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        _tempImageView.alpha = 0;
+        _stateImageView.alpha = 1;
+    });
+
 }
 
 - (void)change:(id)sender {

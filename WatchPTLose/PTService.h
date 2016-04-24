@@ -15,6 +15,7 @@ static NSString * const kChangeNotification = @"kChangeNotification";
 - (NSArray<GambleRecord *>*)allRecords;
 - (NSInteger)totalWin;
 - (UIImage *)imageForAmount:(NSInteger)amount;
+- (UIImage *)instantImageForAmount:(NSInteger)amount;
 - (void)deleteItemAtIndex:(NSInteger)index;
 
 @end

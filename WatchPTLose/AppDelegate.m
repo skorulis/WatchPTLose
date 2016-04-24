@@ -4,6 +4,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "EventListViewController.h"
+#import "BevViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,16 +17,16 @@
     
     ViewController *vc = [[ViewController alloc] init];
     EventListViewController *events = [[EventListViewController alloc] init];
+    BevViewController *bev = [[BevViewController alloc] init];
     
     UITabBarController *tab = [[UITabBarController alloc] init];
-    tab.viewControllers = @[vc,events];
+    tab.viewControllers = @[vc,events,bev];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tab;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    return YES;
     return YES;
 }
 

@@ -5,6 +5,7 @@
 #import "PTService.h"
 #import "ThemeService.h"
 #import <Masonry/Masonry.h>
+#import <FontAwesomeKit/FontAwesomeKit.h>
 
 @interface EventListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,7 +24,9 @@
     _theme = [ThemeService sharedInstance];
     _dateFormat = [[NSDateFormatter alloc] init];
     _dateFormat.dateFormat = @"HH:mm";
-    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"events" image:nil tag:0];
+    FAKIcon *icon = [FAKFontAwesome listOlIconWithSize:24];
+    UIImage *image = [icon imageWithSize:CGSizeMake(30, 30)];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"events" image:image tag:0];
     return self;
 }
 
@@ -40,7 +43,8 @@
 
 - (void)buildLayout {
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.view);
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).with.offset(20);
         make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
     }];
 }

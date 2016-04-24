@@ -9,6 +9,7 @@ static const NSInteger kMaxWin = 400;
 @implementation PTService {
     NSMutableArray *_gambleRecords;
     NSArray *_faceImages;
+    NSDictionary *_instantFaceMapping;
 }
 
 + (PTService *)sharedInstance {
@@ -32,6 +33,9 @@ static const NSInteger kMaxWin = 400;
     }
     
     _faceImages = @[@"angry1",@"shocked1",@"angry2",@"0",@"1",@"shocked2",@"stoned1",@"stoned2",@"2",@"3",@"4",@"6",@"7",@"8",@"plain3",@"plain2",@"plain1",@"10",@"11",@"happy1",@"happy2",@"happy3",@"12",@"13",@"14",@"winning1",@"16",@"winning2",@"17"];
+    
+    _instantFaceMapping = @{@100 : @"winning2", @50 : @"winning1", @20 : @"happy2", @10 : @"10", @5 : @"11", @-100 : @"shocked1", @-50 : @"stoned1", @-20 : @"4", @-10 : @"2", @-5 : @"0"};
+    
     return self;
 }
 
@@ -76,6 +80,14 @@ static const NSInteger kMaxWin = 400;
         total += step;
     }
     return [UIImage imageNamed:@"17"];
+}
+
+- (UIImage *)instantImageForAmount:(NSInteger)amount {
+    NSString *img = _instantFaceMapping[@(amount)];
+    if (!img) {
+        return [self imageForAmount:amount];
+    }
+    return [UIImage imageNamed:img];
 }
 
 - (void)deleteItemAtIndex:(NSInteger)index {
