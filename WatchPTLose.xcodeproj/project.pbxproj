@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC1DF17B6C38AEE754010E88 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B570A43C88485771F51F1489 /* libPods.a */; };
+		FAEE49CF1CCC686E004F0433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49CE1CCC686E004F0433 /* main.m */; };
+		FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49D11CCC686E004F0433 /* AppDelegate.m */; };
+		FAEE49D51CCC686E004F0433 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49D41CCC686E004F0433 /* ViewController.m */; };
+		FAEE49DA1CCC686E004F0433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEE49D91CCC686E004F0433 /* Assets.xcassets */; };
+		FAEE49DD1CCC686E004F0433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEE49DB1CCC686E004F0433 /* LaunchScreen.storyboard */; };
+		FAEE49E81CCC686E004F0433 /* WatchPTLoseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49E71CCC686E004F0433 /* WatchPTLoseTests.m */; };
+		FAEE49F41CCC6E08004F0433 /* PTService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49F31CCC6E08004F0433 /* PTService.m */; };
+		FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAEE49E41CCC686E004F0433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAEE49C21CCC686E004F0433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEE49C91CCC686E004F0433;
+			remoteInfo = WatchPTLose;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B570A43C88485771F51F1489 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEE49CA1CCC686E004F0433 /* WatchPTLose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchPTLose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEE49CE1CCC686E004F0433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAEE49D01CCC686E004F0433 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAEE49D11CCC686E004F0433 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAEE49D31CCC686E004F0433 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAEE49D41CCC686E004F0433 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAEE49D91CCC686E004F0433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAEE49DC1CCC686E004F0433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAEE49DE1CCC686E004F0433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEE49E31CCC686E004F0433 /* WatchPTLoseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchPTLoseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEE49E71CCC686E004F0433 /* WatchPTLoseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatchPTLoseTests.m; sourceTree = "<group>"; };
+		FAEE49E91CCC686E004F0433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEE49F21CCC6E08004F0433 /* PTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTService.h; sourceTree = "<group>"; };
+		FAEE49F31CCC6E08004F0433 /* PTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTService.m; sourceTree = "<group>"; };
+		FAEE49F51CCC6E5D004F0433 /* GambleRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GambleRecord.h; sourceTree = "<group>"; };
+		FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GambleRecord.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAEE49C71CCC686E004F0433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1DF17B6C38AEE754010E88 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEE49E01CCC686E004F0433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		919EC9C1EE79478EA7600CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B570A43C88485771F51F1489 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C62C13A97BFDF40494C18449 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */,
+				9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAEE49C11CCC686E004F0433 = {
+			isa = PBXGroup;
+			children = (
+				FAEE49CC1CCC686E004F0433 /* WatchPTLose */,
+				FAEE49E61CCC686E004F0433 /* WatchPTLoseTests */,
+				FAEE49CB1CCC686E004F0433 /* Products */,
+				C62C13A97BFDF40494C18449 /* Pods */,
+				919EC9C1EE79478EA7600CDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAEE49CB1CCC686E004F0433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE49CA1CCC686E004F0433 /* WatchPTLose.app */,
+				FAEE49E31CCC686E004F0433 /* WatchPTLoseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAEE49CC1CCC686E004F0433 /* WatchPTLose */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE49D01CCC686E004F0433 /* AppDelegate.h */,
+				FAEE49D11CCC686E004F0433 /* AppDelegate.m */,
+				FAEE49D31CCC686E004F0433 /* ViewController.h */,
+				FAEE49D41CCC686E004F0433 /* ViewController.m */,
+				FAEE49D91CCC686E004F0433 /* Assets.xcassets */,
+				FAEE49DB1CCC686E004F0433 /* LaunchScreen.storyboard */,
+				FAEE49DE1CCC686E004F0433 /* Info.plist */,
+				FAEE49CD1CCC686E004F0433 /* Supporting Files */,
+				FAEE49F21CCC6E08004F0433 /* PTService.h */,
+				FAEE49F31CCC6E08004F0433 /* PTService.m */,
+				FAEE49F51CCC6E5D004F0433 /* GambleRecord.h */,
+				FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */,
+			);
+			path = WatchPTLose;
+			sourceTree = "<group>";
+		};
+		FAEE49CD1CCC686E004F0433 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE49CE1CCC686E004F0433 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAEE49E61CCC686E004F0433 /* WatchPTLoseTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE49E71CCC686E004F0433 /* WatchPTLoseTests.m */,
+				FAEE49E91CCC686E004F0433 /* Info.plist */,
+			);
+			path = WatchPTLoseTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAEE49C91CCC686E004F0433 /* WatchPTLose */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEE49EC1CCC686E004F0433 /* Build configuration list for PBXNativeTarget "WatchPTLose" */;
+			buildPhases = (
+				398B1032391B22B3F2CD4921 /* Check Pods Manifest.lock */,
+				FAEE49C61CCC686E004F0433 /* Sources */,
+				FAEE49C71CCC686E004F0433 /* Frameworks */,
+				FAEE49C81CCC686E004F0433 /* Resources */,
+				28F0876F3C93F24C2E160079 /* Embed Pods Frameworks */,
+				61AF34B0DB911A7A36EF8CD2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchPTLose;
+			productName = WatchPTLose;
+			productReference = FAEE49CA1CCC686E004F0433 /* WatchPTLose.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAEE49E21CCC686E004F0433 /* WatchPTLoseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEE49EF1CCC686E004F0433 /* Build configuration list for PBXNativeTarget "WatchPTLoseTests" */;
+			buildPhases = (
+				FAEE49DF1CCC686E004F0433 /* Sources */,
+				FAEE49E01CCC686E004F0433 /* Frameworks */,
+				FAEE49E11CCC686E004F0433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAEE49E51CCC686E004F0433 /* PBXTargetDependency */,
+			);
+			name = WatchPTLoseTests;
+			productName = WatchPTLoseTests;
+			productReference = FAEE49E31CCC686E004F0433 /* WatchPTLoseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAEE49C21CCC686E004F0433 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alex Skorulis";
+				TargetAttributes = {
+					FAEE49C91CCC686E004F0433 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					FAEE49E21CCC686E004F0433 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = FAEE49C91CCC686E004F0433;
+					};
+				};
+			};
+			buildConfigurationList = FAEE49C51CCC686E004F0433 /* Build configuration list for PBXProject "WatchPTLose" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAEE49C11CCC686E004F0433;
+			productRefGroup = FAEE49CB1CCC686E004F0433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAEE49C91CCC686E004F0433 /* WatchPTLose */,
+				FAEE49E21CCC686E004F0433 /* WatchPTLoseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAEE49C81CCC686E004F0433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEE49DD1CCC686E004F0433 /* LaunchScreen.storyboard in Resources */,
+				FAEE49DA1CCC686E004F0433 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEE49E11CCC686E004F0433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F0876F3C93F24C2E160079 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		398B1032391B22B3F2CD4921 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61AF34B0DB911A7A36EF8CD2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAEE49C61CCC686E004F0433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEE49D51CCC686E004F0433 /* ViewController.m in Sources */,
+				FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */,
+				FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */,
+				FAEE49CF1CCC686E004F0433 /* main.m in Sources */,
+				FAEE49F41CCC6E08004F0433 /* PTService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEE49DF1CCC686E004F0433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEE49E81CCC686E004F0433 /* WatchPTLoseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAEE49E51CCC686E004F0433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAEE49C91CCC686E004F0433 /* WatchPTLose */;
+			targetProxy = FAEE49E41CCC686E004F0433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAEE49DB1CCC686E004F0433 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEE49DC1CCC686E004F0433 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAEE49EA1CCC686E004F0433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAEE49EB1CCC686E004F0433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAEE49ED1CCC686E004F0433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WatchPTLose/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.WatchPTLose;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAEE49EE1CCC686E004F0433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WatchPTLose/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.WatchPTLose;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FAEE49F01CCC686E004F0433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WatchPTLoseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.WatchPTLoseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchPTLose.app/WatchPTLose";
+			};
+			name = Debug;
+		};
+		FAEE49F11CCC686E004F0433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WatchPTLoseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.WatchPTLoseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchPTLose.app/WatchPTLose";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAEE49C51CCC686E004F0433 /* Build configuration list for PBXProject "WatchPTLose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEE49EA1CCC686E004F0433 /* Debug */,
+				FAEE49EB1CCC686E004F0433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEE49EC1CCC686E004F0433 /* Build configuration list for PBXNativeTarget "WatchPTLose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEE49ED1CCC686E004F0433 /* Debug */,
+				FAEE49EE1CCC686E004F0433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEE49EF1CCC686E004F0433 /* Build configuration list for PBXNativeTarget "WatchPTLoseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEE49F01CCC686E004F0433 /* Debug */,
+				FAEE49F11CCC686E004F0433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAEE49C21CCC686E004F0433 /* Project object */;
+}

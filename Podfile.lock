@@ -1,0 +1,35 @@
+PODS:
+  - FontAwesomeKit (2.2.0):
+    - FontAwesomeKit/Core (= 2.2.0)
+    - FontAwesomeKit/FontAwesome (= 2.2.0)
+    - FontAwesomeKit/FoundationIcons (= 2.2.0)
+    - FontAwesomeKit/IonIcons (= 2.2.0)
+    - FontAwesomeKit/Zocial (= 2.2.0)
+  - FontAwesomeKit/Core (2.2.0)
+  - FontAwesomeKit/FontAwesome (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.0):
+    - FontAwesomeKit/Core
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - Masonry (1.0.0)
+  - Underscore.m (0.2.1)
+
+DEPENDENCIES:
+  - FontAwesomeKit
+  - Mantle
+  - Masonry
+  - Underscore.m
+
+SPEC CHECKSUMS:
+  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
+
+COCOAPODS: 0.39.0
