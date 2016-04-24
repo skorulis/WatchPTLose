@@ -22,4 +22,27 @@
     }
 }
 
+- (UIImage *)upButtonBackground {
+    UIColor *c = [self colorForAmount:1];
+    return [ThemeService imageFromColor:c size:CGSizeMake(1, 1)];
+}
+
+- (UIImage *)downButtonBackground {
+    UIColor *c = [self colorForAmount:-1];
+    return [ThemeService imageFromColor:c size:CGSizeMake(1, 1)];
+}
+
++ (UIImage*)imageFromColor:(UIColor*)color size:(CGSize)size {
+    NSAssert(size.width > 0 && size.height > 0,@"Attempt to create image context with size %@",NSStringFromCGSize(size));
+    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(ctx, color.CGColor);
+    CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height));
+    
+    UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
+
 @end

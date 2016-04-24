@@ -9,5 +9,7 @@
 
 + (ThemeService *)sharedInstance;
 - (UIColor *)colorForAmount:(NSInteger)amount;
+- (UIImage *)upButtonBackground;
+- (UIImage *)downButtonBackground;
 
 @end

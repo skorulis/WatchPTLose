@@ -3,6 +3,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventListViewController : UITableViewController
+@interface EventListViewController : UIViewController
 
 @end

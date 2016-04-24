@@ -40,27 +40,31 @@
     NSArray *amounts = @[@5,@10,@20,@50,@100];
     _topButtons = Underscore.array(amounts).map(^UIButton *(NSNumber *amount) {
         UIButton *b = [self makeButton:amount];
+        [b setBackgroundImage:_theme.upButtonBackground forState:UIControlStateNormal];
         [b addTarget:self action:@selector(winPressed:) forControlEvents:UIControlEventTouchUpInside];
         return b;
     }).unwrap;
     
     _bottomButtons = Underscore.array(amounts).map(^UIButton *(NSNumber *amount) {
         UIButton *b = [self makeButton:amount];
+        [b setBackgroundImage:_theme.downButtonBackground forState:UIControlStateNormal];
         [b addTarget:self action:@selector(losePressed:) forControlEvents:UIControlEventTouchUpInside];
         return b;
     }).unwrap;
     
     
     _topStack = [[UIStackView alloc] initWithArrangedSubviews:_topButtons];
-    _topStack.alignment = UIStackViewAlignmentCenter;
+    _topStack.alignment = UIStackViewAlignmentFill;
     _topStack.axis = UILayoutConstraintAxisHorizontal;
     _topStack.distribution = UIStackViewDistributionFillEqually;
+    _topStack.spacing = 10;
     [self.view addSubview:_topStack];
     
     _bottomStack = [[UIStackView alloc] initWithArrangedSubviews:_bottomButtons];
-    _bottomStack.alignment = UIStackViewAlignmentCenter;
+    _bottomStack.alignment = UIStackViewAlignmentFill;
     _bottomStack.axis = UILayoutConstraintAxisHorizontal;
     _bottomStack.distribution = UIStackViewDistributionFillEqually;
+    _bottomStack.spacing = 10;
     [self.view addSubview:_bottomStack];
     
     _stateImageView = [[UIImageView alloc] init];
@@ -68,6 +72,7 @@
     [self.view addSubview:_stateImageView];
     
     _winLossLabel = [[UILabel alloc] init];
+    _winLossLabel.font = [UIFont boldSystemFontOfSize:24];
     [self.view addSubview:_winLossLabel];
     [self updateState];
     [self buildLayout];
@@ -75,25 +80,24 @@
 }
 
 - (UIButton *)makeButton:(NSNumber *)amount {
-    UIButton *b = [[UIButton alloc] init];
+    UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     b.tag = amount.intValue;
     NSString *title = [NSString stringWithFormat:@"$%i",amount.intValue];
     [b setTitle:title forState:UIControlStateNormal];
-    [b setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     return b;
 }
 
 - (void)buildLayout {
     [_topStack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view).with.offset(40);
-        make.height.equalTo(@50);
+        make.top.equalTo(self.view).with.offset(20);
+        make.height.equalTo(@40);
     }];
     
     [_bottomStack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.mas_bottomLayoutGuideTop).with.offset(-40);
-        make.height.equalTo(@50);
+        make.bottom.equalTo(self.mas_bottomLayoutGuideTop).with.offset(-10);
+        make.height.equalTo(@40);
     }];
     
     [_stateImageView mas_makeConstraints:^(MASConstraintMaker *make) {
