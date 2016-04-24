@@ -3,6 +3,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "EventListViewController.h"
 
 @interface AppDelegate ()
 
@@ -12,8 +13,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    ViewController *vc = [[ViewController alloc] init];
+    EventListViewController *events = [[EventListViewController alloc] init];
+    
+    UITabBarController *tab = [[UITabBarController alloc] init];
+    tab.viewControllers = @[vc,events];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = tab;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

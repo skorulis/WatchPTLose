@@ -5,9 +5,13 @@
 
 @implementation GambleRecord
 
-- (instancetype)initWithDate:(NSDate *)date amount:(NSInteger)amount {
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return [NSDictionary mtl_identityPropertyMapWithModel:[self class]];
+}
+
+- (instancetype)initWithDate:(NSTimeInterval)date amount:(NSInteger)amount {
     self = [super init];
-    _date = date;
+    _timestamp = date;
     _amount = amount;
     return self;
 }

@@ -2,12 +2,13 @@
 //  Copyright © 2016 Alex Skorulis. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface GambleRecord : NSObject
+@interface GambleRecord : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic,readonly) NSDate *date;
+@property (nonatomic,readonly) NSTimeInterval timestamp;
 @property (nonatomic,readonly) NSInteger amount;
 
-- (instancetype)initWithDate:(NSDate *)date amount:(NSInteger)amount;
+- (instancetype)initWithDate:(NSTimeInterval)date amount:(NSInteger)amount;
 
 @end

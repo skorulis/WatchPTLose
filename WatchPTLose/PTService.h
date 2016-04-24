@@ -3,11 +3,18 @@
 
 #import <Foundation/Foundation.h>
 #import "GambleRecord.h"
+#import <UIKit/UIKit.h>
+
+static NSString * const kChangeNotification = @"kChangeNotification";
 
 @interface PTService : NSObject
+
++ (PTService *)sharedInstance;
 
 - (void)addWin:(NSInteger)amount;
 - (NSArray<GambleRecord *>*)allRecords;
 - (NSInteger)totalWin;
+- (UIImage *)imageForAmount:(NSInteger)amount;
+- (void)deleteItemAtIndex:(NSInteger)index;
 
 @end

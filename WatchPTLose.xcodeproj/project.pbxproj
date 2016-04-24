@@ -16,6 +16,8 @@
 		FAEE49E81CCC686E004F0433 /* WatchPTLoseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49E71CCC686E004F0433 /* WatchPTLoseTests.m */; };
 		FAEE49F41CCC6E08004F0433 /* PTService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49F31CCC6E08004F0433 /* PTService.m */; };
 		FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */; };
+		FAEE49FA1CCCC922004F0433 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49F91CCCC922004F0433 /* EventListViewController.m */; };
+		FAEE49FD1CCCD240004F0433 /* ThemeService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49FC1CCCD240004F0433 /* ThemeService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		FAEE49F31CCC6E08004F0433 /* PTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTService.m; sourceTree = "<group>"; };
 		FAEE49F51CCC6E5D004F0433 /* GambleRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GambleRecord.h; sourceTree = "<group>"; };
 		FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GambleRecord.m; sourceTree = "<group>"; };
+		FAEE49F81CCCC922004F0433 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
+		FAEE49F91CCCC922004F0433 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
+		FAEE49FB1CCCD240004F0433 /* ThemeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeService.h; sourceTree = "<group>"; };
+		FAEE49FC1CCCD240004F0433 /* ThemeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,10 @@
 				FAEE49F31CCC6E08004F0433 /* PTService.m */,
 				FAEE49F51CCC6E5D004F0433 /* GambleRecord.h */,
 				FAEE49F61CCC6E5D004F0433 /* GambleRecord.m */,
+				FAEE49F81CCCC922004F0433 /* EventListViewController.h */,
+				FAEE49F91CCCC922004F0433 /* EventListViewController.m */,
+				FAEE49FB1CCCD240004F0433 /* ThemeService.h */,
+				FAEE49FC1CCCD240004F0433 /* ThemeService.m */,
 			);
 			path = WatchPTLose;
 			sourceTree = "<group>";
@@ -293,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEE49D51CCC686E004F0433 /* ViewController.m in Sources */,
+				FAEE49FA1CCCC922004F0433 /* EventListViewController.m in Sources */,
+				FAEE49FD1CCCD240004F0433 /* ThemeService.m in Sources */,
 				FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */,
 				FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */,
 				FAEE49CF1CCC686E004F0433 /* main.m in Sources */,
