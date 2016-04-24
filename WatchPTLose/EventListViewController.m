@@ -52,24 +52,38 @@
 #pragma mark UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_service allRecords].count;
+    return section == 0 ? [_service allRecords].count : _service.allDrinks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GambleRecord *record = _service.allRecords[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"$%d",(int)ABS(record.amount)];
-    cell.textLabel.textColor = [_theme colorForAmount:record.amount];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:record.timestamp];
-    cell.detailTextLabel.text = [_dateFormat stringFromDate:date];
-    return cell;
+    if (indexPath.section == 0) {
+        GambleRecord *record = _service.allRecords[indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"$%d",(int)ABS(record.amount)];
+        cell.textLabel.textColor = [_theme colorForAmount:record.amount];
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:record.timestamp];
+        cell.detailTextLabel.text = [_dateFormat stringFromDate:date];
+        return cell;
+    } else {
+        BevRecord *bev = _service.allDrinks[indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ bev",bev.person];
+        NSInteger amount = [bev.person isEqualToString:@"skorulis"] ? -1 : 1;
+        cell.textLabel.textColor = [_theme colorForAmount:amount];
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:bev.timestamp];
+        cell.detailTextLabel.text = [_dateFormat stringFromDate:date];
+        return cell;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return section == 0 ? @"gambling" : @"beers";
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,7 +91,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_service deleteItemAtIndex:indexPath.row];
+    if (indexPath.section == 0) {
+        [_service deleteBetAtIndex:indexPath.row];
+    } else {
+        [_service deleteDrinkAtIndex:indexPath.row];
+    }
 }
 
 - (void)change:(id)sender {

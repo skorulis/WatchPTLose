@@ -8,6 +8,7 @@ static const NSInteger kMaxWin = 400;
 
 @implementation PTService {
     NSMutableArray *_gambleRecords;
+    NSMutableArray *_drinkRecords;
     NSArray *_faceImages;
     NSDictionary *_instantFaceMapping;
 }
@@ -23,13 +24,19 @@ static const NSInteger kMaxWin = 400;
 
 - (instancetype)init {
     self = [super init];
-    NSString *path = [NSString stringWithFormat:@"%@/gamble.json",[PTService appDocumentsDirectoryPath]];
-    NSData *gambleData = [NSData dataWithContentsOfFile:path];
+    NSData *gambleData = [NSData dataWithContentsOfFile:[self gamblePath]];
+    NSData *drinksData = [NSData dataWithContentsOfFile:[self drinksPath]];
     if (gambleData) {
         NSArray *json = [NSJSONSerialization JSONObjectWithData:gambleData options:0 error:nil];
         _gambleRecords = [MTLJSONAdapter modelsOfClass:[GambleRecord class] fromJSONArray:json error:nil].mutableCopy;
     } else {
         _gambleRecords = [[NSMutableArray alloc] init];
+    }
+    if (drinksData) {
+        NSArray *json = [NSJSONSerialization JSONObjectWithData:drinksData options:0 error:nil];
+        _drinkRecords = [MTLJSONAdapter modelsOfClass:[BevRecord class] fromJSONArray:json error:nil].mutableCopy;
+    } else {
+        _drinkRecords = [[NSMutableArray alloc] init];
     }
     
     _faceImages = @[@"angry1",@"shocked1",@"angry2",@"0",@"1",@"shocked2",@"stoned1",@"stoned2",@"2",@"3",@"4",@"6",@"7",@"8",@"plain3",@"plain2",@"plain1",@"10",@"11",@"happy1",@"happy2",@"happy3",@"12",@"13",@"14",@"winning1",@"16",@"winning2",@"17"];
@@ -44,9 +51,50 @@ static const NSInteger kMaxWin = 400;
     [_gambleRecords addObject:r];
     NSArray* json = [MTLJSONAdapter JSONArrayFromModels:_gambleRecords error:nil];
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
-    NSString *path = [NSString stringWithFormat:@"%@/gamble.json",[PTService appDocumentsDirectoryPath]];
-    [data writeToFile:path atomically:YES];
+    [data writeToFile:[self gamblePath] atomically:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
+}
+
+- (NSString *)gamblePath {
+    return [NSString stringWithFormat:@"%@/gamble.json",[PTService appDocumentsDirectoryPath]];
+}
+
+- (NSString *)drinksPath {
+    return [NSString stringWithFormat:@"%@/drinks.json",[PTService appDocumentsDirectoryPath]];
+}
+
+- (void)addPTBev {
+    BevRecord *br = [[BevRecord alloc] initWithDate:[NSDate date].timeIntervalSince1970 person:@"pt"];
+    [_drinkRecords addObject:br];
+    [self saveBevs];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
+}
+
+- (void)addSKBev {
+    BevRecord *br = [[BevRecord alloc] initWithDate:[NSDate date].timeIntervalSince1970 person:@"skorulis"];
+    [_drinkRecords addObject:br];
+    [self saveBevs];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
+}
+
+- (void)saveBevs {
+    NSArray* json = [MTLJSONAdapter JSONArrayFromModels:_drinkRecords error:nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
+    [data writeToFile:[self drinksPath] atomically:YES];
+}
+
+- (NSInteger)skBevCount {
+    return [self bevCount:@"skorulis"];
+}
+
+- (NSInteger)ptBevCount {
+    return [self bevCount:@"pt"];
+}
+
+- (NSInteger)bevCount:(NSString *)name {
+    return Underscore.array(_drinkRecords).filter(^BOOL (BevRecord *br) {
+        return [br.person isEqualToString:name];
+    }).unwrap.count;
 }
 
 + (NSString*) appDocumentsDirectoryPath {
@@ -67,6 +115,10 @@ static const NSInteger kMaxWin = 400;
 
 - (NSArray<GambleRecord *>*)allRecords {
     return _gambleRecords.copy;
+}
+
+- (NSArray<BevRecord *> *)allDrinks {
+    return _drinkRecords.copy;
 }
 
 - (UIImage *)imageForAmount:(NSInteger)amount {
@@ -90,8 +142,13 @@ static const NSInteger kMaxWin = 400;
     return [UIImage imageNamed:img];
 }
 
-- (void)deleteItemAtIndex:(NSInteger)index {
+- (void)deleteBetAtIndex:(NSInteger)index {
     [_gambleRecords removeObjectAtIndex:index];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
+}
+
+- (void)deleteDrinkAtIndex:(NSInteger)index {
+    [_drinkRecords removeObjectAtIndex:index];
     [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
 }
 
