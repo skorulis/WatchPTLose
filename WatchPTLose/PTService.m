@@ -39,7 +39,7 @@ static const NSInteger kMaxWin = 400;
         _drinkRecords = [[NSMutableArray alloc] init];
     }
     
-    _faceImages = @[@"angry1",@"shocked1",@"angry2",@"0",@"1",@"shocked2",@"stoned1",@"stoned2",@"2",@"3",@"4",@"6",@"7",@"8",@"plain3",@"plain2",@"plain1",@"10",@"11",@"happy1",@"happy2",@"happy3",@"12",@"13",@"14",@"winning1",@"16",@"winning2",@"17"];
+    _faceImages = @[@"angry1",@"shocked1",@"angry2",@"0",@"1",@"shocked2",@"stoned1",@"stoned2",@"2",@"odd2",@"3",@"4",@"shocked3",@"plain4",@"7",@"8",@"plain3",@"plain2",@"plain1",@"10",@"11",@"happy1",@"happy2",@"happy3",@"12",@"13",@"14",@"winning1",@"16",@"winning2",@"17"];
     
     _instantFaceMapping = @{@100 : @"winning2", @50 : @"winning1", @20 : @"happy2", @10 : @"10", @5 : @"11", @-100 : @"shocked1", @-50 : @"stoned1", @-20 : @"4", @-10 : @"2", @-5 : @"0"};
     
@@ -48,7 +48,7 @@ static const NSInteger kMaxWin = 400;
 
 - (void)addWin:(NSInteger)amount {
     GambleRecord *r = [[GambleRecord alloc] initWithDate:[NSDate date].timeIntervalSince1970 amount:amount];
-    [_gambleRecords addObject:r];
+    [_gambleRecords insertObject:r atIndex:0];
     NSArray* json = [MTLJSONAdapter JSONArrayFromModels:_gambleRecords error:nil];
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
     [data writeToFile:[self gamblePath] atomically:YES];
@@ -65,14 +65,14 @@ static const NSInteger kMaxWin = 400;
 
 - (void)addPTBev {
     BevRecord *br = [[BevRecord alloc] initWithDate:[NSDate date].timeIntervalSince1970 person:@"pt"];
-    [_drinkRecords addObject:br];
+    [_drinkRecords insertObject:br atIndex:0];
     [self saveBevs];
     [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
 }
 
 - (void)addSKBev {
     BevRecord *br = [[BevRecord alloc] initWithDate:[NSDate date].timeIntervalSince1970 person:@"skorulis"];
-    [_drinkRecords addObject:br];
+    [_drinkRecords insertObject:br atIndex:0];
     [self saveBevs];
     [[NSNotificationCenter defaultCenter] postNotificationName:kChangeNotification object:nil];
 }
