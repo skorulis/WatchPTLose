@@ -2,9 +2,10 @@
 //  Copyright © 2016 Alex Skorulis. All rights reserved.
 
 #import "PTService.h"
-#import <Underscore.m/Underscore.h>
 static const NSInteger kMaxLose = -250;
 static const NSInteger kMaxWin = 400;
+
+@import Underscore_m;
 
 @implementation PTService {
     NSMutableArray *_gambleRecords;

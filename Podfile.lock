@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
   - FontAwesomeKit (2.2.0):
     - FontAwesomeKit/Core (= 2.2.0)
     - FontAwesomeKit/FontAwesome (= 2.2.0)
@@ -21,15 +24,19 @@ PODS:
   - Underscore.m (0.2.1)
 
 DEPENDENCIES:
+  - Charts
   - FontAwesomeKit
   - Mantle
   - Masonry
   - Underscore.m
 
 SPEC CHECKSUMS:
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 862100460e1e8273f60b99427faf647919a59656
+
+COCOAPODS: 1.2.1

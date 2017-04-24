@@ -2,11 +2,12 @@
 //  Copyright © 2016 Alex Skorulis. All rights reserved.
 
 #import "ViewController.h"
-#import <Masonry/Masonry.h>
-#import <Underscore.m/Underscore.h>
 #import "PTService.h"
 #import "ThemeService.h"
 #import <FontAwesomeKit/FontAwesomeKit.h>
+
+@import Masonry;
+@import Underscore_m;
 
 @interface ViewController ()
 

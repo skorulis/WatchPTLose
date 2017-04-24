@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC1DF17B6C38AEE754010E88 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B570A43C88485771F51F1489 /* libPods.a */; };
+		8EFC794D7661AF525446A650 /* Pods_WatchPTLose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCE5ACC5766855934D93A0 /* Pods_WatchPTLose.framework */; };
+		FA87817F1EADECDB000228C5 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87817E1EADECDB000228C5 /* ChartViewController.m */; };
+		FA8781821EADF76C000228C5 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8781811EADF76C000228C5 /* DateValueFormatter.m */; };
 		FAEE49CF1CCC686E004F0433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49CE1CCC686E004F0433 /* main.m */; };
 		FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49D11CCC686E004F0433 /* AppDelegate.m */; };
 		FAEE49D51CCC686E004F0433 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49D41CCC686E004F0433 /* ViewController.m */; };
@@ -33,9 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B570A43C88485771F51F1489 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DCE5ACC5766855934D93A0 /* Pods_WatchPTLose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchPTLose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0394E0A7D2210F9AE6DC9F /* Pods-WatchPTLose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchPTLose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose.debug.xcconfig"; sourceTree = "<group>"; };
+		D25D3925E54F03077FA361E8 /* Pods-WatchPTLose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchPTLose.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose.release.xcconfig"; sourceTree = "<group>"; };
+		FA87817D1EADECDB000228C5 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		FA87817E1EADECDB000228C5 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		FA8781801EADF76C000228C5 /* DateValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
+		FA8781811EADF76C000228C5 /* DateValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateValueFormatter.m; sourceTree = "<group>"; };
 		FAEE49CA1CCC686E004F0433 /* WatchPTLose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchPTLose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEE49CE1CCC686E004F0433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAEE49D01CCC686E004F0433 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1DF17B6C38AEE754010E88 /* libPods.a in Frameworks */,
+				8EFC794D7661AF525446A650 /* Pods_WatchPTLose.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,19 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		919EC9C1EE79478EA7600CDF /* Frameworks */ = {
+		4EA76E0F2C72DBB89276344A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B570A43C88485771F51F1489 /* libPods.a */,
+				69DCE5ACC5766855934D93A0 /* Pods_WatchPTLose.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C62C13A97BFDF40494C18449 /* Pods */ = {
+		E493EE91CEB46E68D8F16B31 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */,
-				9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */,
+				AB0394E0A7D2210F9AE6DC9F /* Pods-WatchPTLose.debug.xcconfig */,
+				D25D3925E54F03077FA361E8 /* Pods-WatchPTLose.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -104,8 +110,8 @@
 				FAEE49CC1CCC686E004F0433 /* WatchPTLose */,
 				FAEE49E61CCC686E004F0433 /* WatchPTLoseTests */,
 				FAEE49CB1CCC686E004F0433 /* Products */,
-				C62C13A97BFDF40494C18449 /* Pods */,
-				919EC9C1EE79478EA7600CDF /* Frameworks */,
+				E493EE91CEB46E68D8F16B31 /* Pods */,
+				4EA76E0F2C72DBB89276344A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +127,8 @@
 		FAEE49CC1CCC686E004F0433 /* WatchPTLose */ = {
 			isa = PBXGroup;
 			children = (
+				FA8781801EADF76C000228C5 /* DateValueFormatter.h */,
+				FA8781811EADF76C000228C5 /* DateValueFormatter.m */,
 				FAEE49D01CCC686E004F0433 /* AppDelegate.h */,
 				FAEE49D11CCC686E004F0433 /* AppDelegate.m */,
 				FAEE49D31CCC686E004F0433 /* ViewController.h */,
@@ -141,6 +149,8 @@
 				FAEE49FF1CCCE3A1004F0433 /* BevViewController.m */,
 				FAEE4A011CCCF026004F0433 /* BevRecord.h */,
 				FAEE4A021CCCF026004F0433 /* BevRecord.m */,
+				FA87817D1EADECDB000228C5 /* ChartViewController.h */,
+				FA87817E1EADECDB000228C5 /* ChartViewController.m */,
 			);
 			path = WatchPTLose;
 			sourceTree = "<group>";
@@ -169,12 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEE49EC1CCC686E004F0433 /* Build configuration list for PBXNativeTarget "WatchPTLose" */;
 			buildPhases = (
-				398B1032391B22B3F2CD4921 /* Check Pods Manifest.lock */,
+				4A97F7EA043969C407207D76 /* [CP] Check Pods Manifest.lock */,
 				FAEE49C61CCC686E004F0433 /* Sources */,
 				FAEE49C71CCC686E004F0433 /* Frameworks */,
 				FAEE49C81CCC686E004F0433 /* Resources */,
-				28F0876F3C93F24C2E160079 /* Embed Pods Frameworks */,
-				61AF34B0DB911A7A36EF8CD2 /* Copy Pods Resources */,
+				00C4A2AF3F77BD41197CA212 /* [CP] Embed Pods Frameworks */,
+				46DF4DB72985116C6CDD73C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,49 +270,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28F0876F3C93F24C2E160079 /* Embed Pods Frameworks */ = {
+		00C4A2AF3F77BD41197CA212 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		398B1032391B22B3F2CD4921 /* Check Pods Manifest.lock */ = {
+		46DF4DB72985116C6CDD73C3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61AF34B0DB911A7A36EF8CD2 /* Copy Pods Resources */ = {
+		4A97F7EA043969C407207D76 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -317,9 +327,11 @@
 				FAEE49FA1CCCC922004F0433 /* EventListViewController.m in Sources */,
 				FAEE4A001CCCE3A1004F0433 /* BevViewController.m in Sources */,
 				FAEE49FD1CCCD240004F0433 /* ThemeService.m in Sources */,
+				FA87817F1EADECDB000228C5 /* ChartViewController.m in Sources */,
 				FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */,
 				FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */,
 				FAEE49CF1CCC686E004F0433 /* main.m in Sources */,
+				FA8781821EADF76C000228C5 /* DateValueFormatter.m in Sources */,
 				FAEE49F41CCC6E08004F0433 /* PTService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +452,7 @@
 		};
 		FAEE49ED1CCC686E004F0433 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B9989ACF0804AD1FD404FF2 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = AB0394E0A7D2210F9AE6DC9F /* Pods-WatchPTLose.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchPTLose/Info.plist;
@@ -453,7 +465,7 @@
 		};
 		FAEE49EE1CCC686E004F0433 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AFCEF94565F87D9FEC4DE98 /* Pods.release.xcconfig */;
+			baseConfigurationReference = D25D3925E54F03077FA361E8 /* Pods-WatchPTLose.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchPTLose/Info.plist;

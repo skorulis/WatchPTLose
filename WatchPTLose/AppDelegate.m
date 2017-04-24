@@ -5,6 +5,7 @@
 #import "ViewController.h"
 #import "EventListViewController.h"
 #import "BevViewController.h"
+#import "ChartViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,10 @@
     ViewController *vc = [[ViewController alloc] init];
     EventListViewController *events = [[EventListViewController alloc] init];
     BevViewController *bev = [[BevViewController alloc] init];
+    ChartViewController *chart = [[ChartViewController alloc] init];
     
     UITabBarController *tab = [[UITabBarController alloc] init];
-    tab.viewControllers = @[vc,events,bev];
+    tab.viewControllers = @[vc,events,bev,chart];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

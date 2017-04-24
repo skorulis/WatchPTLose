@@ -77,8 +77,8 @@
 }
 
 - (void)change:(id)sender {
-    NSString *meTitle = [NSString stringWithFormat:@"skorulis bev\ntotal: %d",_service.skBevCount];
-    NSString *ptTitle = [NSString stringWithFormat:@"PT bev\ntotal: %d",_service.ptBevCount];
+    NSString *meTitle = [NSString stringWithFormat:@"skorulis bev\ntotal: %d",(int)_service.skBevCount];
+    NSString *ptTitle = [NSString stringWithFormat:@"PT bev\ntotal: %d",(int)_service.ptBevCount];
     [_meButton setTitle:meTitle forState:UIControlStateNormal];
     [_ptButton setTitle:ptTitle forState:UIControlStateNormal];
 }
