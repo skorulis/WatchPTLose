@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8EFC794D7661AF525446A650 /* Pods_WatchPTLose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCE5ACC5766855934D93A0 /* Pods_WatchPTLose.framework */; };
+		FA112DE81EAEC6EB005316A2 /* CustomEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA112DE71EAEC6EB005316A2 /* CustomEntryViewController.m */; };
 		FA87817F1EADECDB000228C5 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87817E1EADECDB000228C5 /* ChartViewController.m */; };
 		FA8781821EADF76C000228C5 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8781811EADF76C000228C5 /* DateValueFormatter.m */; };
 		FAEE49CF1CCC686E004F0433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEE49CE1CCC686E004F0433 /* main.m */; };
@@ -38,6 +39,8 @@
 		69DCE5ACC5766855934D93A0 /* Pods_WatchPTLose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchPTLose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0394E0A7D2210F9AE6DC9F /* Pods-WatchPTLose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchPTLose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose.debug.xcconfig"; sourceTree = "<group>"; };
 		D25D3925E54F03077FA361E8 /* Pods-WatchPTLose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchPTLose.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchPTLose/Pods-WatchPTLose.release.xcconfig"; sourceTree = "<group>"; };
+		FA112DE61EAEC6EB005316A2 /* CustomEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryViewController.h; sourceTree = "<group>"; };
+		FA112DE71EAEC6EB005316A2 /* CustomEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryViewController.m; sourceTree = "<group>"; };
 		FA87817D1EADECDB000228C5 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
 		FA87817E1EADECDB000228C5 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		FA8781801EADF76C000228C5 /* DateValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				FAEE4A021CCCF026004F0433 /* BevRecord.m */,
 				FA87817D1EADECDB000228C5 /* ChartViewController.h */,
 				FA87817E1EADECDB000228C5 /* ChartViewController.m */,
+				FA112DE61EAEC6EB005316A2 /* CustomEntryViewController.h */,
+				FA112DE71EAEC6EB005316A2 /* CustomEntryViewController.m */,
 			);
 			path = WatchPTLose;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				TargetAttributes = {
 					FAEE49C91CCC686E004F0433 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = X4S6MUZL2D;
 					};
 					FAEE49E21CCC686E004F0433 = {
 						CreatedOnToolsVersion = 7.3;
@@ -328,6 +334,7 @@
 				FAEE4A001CCCE3A1004F0433 /* BevViewController.m in Sources */,
 				FAEE49FD1CCCD240004F0433 /* ThemeService.m in Sources */,
 				FA87817F1EADECDB000228C5 /* ChartViewController.m in Sources */,
+				FA112DE81EAEC6EB005316A2 /* CustomEntryViewController.m in Sources */,
 				FAEE49D21CCC686E004F0433 /* AppDelegate.m in Sources */,
 				FAEE49F71CCC6E5D004F0433 /* GambleRecord.m in Sources */,
 				FAEE49CF1CCC686E004F0433 /* main.m in Sources */,
@@ -455,6 +462,7 @@
 			baseConfigurationReference = AB0394E0A7D2210F9AE6DC9F /* Pods-WatchPTLose.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				INFOPLIST_FILE = WatchPTLose/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -468,6 +476,7 @@
 			baseConfigurationReference = D25D3925E54F03077FA361E8 /* Pods-WatchPTLose.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				INFOPLIST_FILE = WatchPTLose/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

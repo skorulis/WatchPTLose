@@ -11,5 +11,6 @@
 - (UIColor *)colorForAmount:(NSInteger)amount;
 - (UIImage *)upButtonBackground;
 - (UIImage *)downButtonBackground;
+- (UIImage *)greyButtonBackground;
 
 @end

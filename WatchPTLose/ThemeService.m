@@ -32,6 +32,11 @@
     return [ThemeService imageFromColor:c size:CGSizeMake(1, 1)];
 }
 
+- (UIImage *)greyButtonBackground {
+    UIColor *c = [UIColor grayColor];
+    return [ThemeService imageFromColor:c size:CGSizeMake(1, 1)];
+}
+
 + (UIImage*)imageFromColor:(UIColor*)color size:(CGSize)size {
     NSAssert(size.width > 0 && size.height > 0,@"Attempt to create image context with size %@",NSStringFromCGSize(size));
     UIGraphicsBeginImageContextWithOptions(size, YES, 0);

@@ -6,6 +6,8 @@
 #import "EventListViewController.h"
 #import "BevViewController.h"
 #import "ChartViewController.h"
+#import "CustomEntryViewController.h"
+@import FontAwesomeKit;
 
 @interface AppDelegate ()
 
@@ -15,15 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [FAKFontAwesome iconFontWithSize:1];
     ViewController *vc = [[ViewController alloc] init];
     EventListViewController *events = [[EventListViewController alloc] init];
     BevViewController *bev = [[BevViewController alloc] init];
     ChartViewController *chart = [[ChartViewController alloc] init];
+    CustomEntryViewController *custom = [[CustomEntryViewController alloc] init];
     
     UITabBarController *tab = [[UITabBarController alloc] init];
-    tab.viewControllers = @[vc,events,bev,chart];
-    
+    tab.viewControllers = @[vc,events,bev,chart,custom];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tab;

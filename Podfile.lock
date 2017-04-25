@@ -2,26 +2,32 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
-  - FontAwesomeKit (2.2.0):
-    - FontAwesomeKit/Core (= 2.2.0)
-    - FontAwesomeKit/FontAwesome (= 2.2.0)
-    - FontAwesomeKit/FoundationIcons (= 2.2.0)
-    - FontAwesomeKit/IonIcons (= 2.2.0)
-    - FontAwesomeKit/Zocial (= 2.2.0)
-  - FontAwesomeKit/Core (2.2.0)
-  - FontAwesomeKit/FontAwesome (2.2.0):
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.2.0):
+  - FontAwesomeKit/FoundationIcons (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.2.0):
+  - FontAwesomeKit/IonIcons (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.2.0):
+  - FontAwesomeKit/Material (2.2.1):
     - FontAwesomeKit/Core
-  - Mantle (2.0.7):
-    - Mantle/extobjc (= 2.0.7)
-  - Mantle/extobjc (2.0.7)
-  - Masonry (1.0.0)
-  - Underscore.m (0.2.1)
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - Masonry (1.0.2)
+  - Underscore.m (0.3.0)
 
 DEPENDENCIES:
   - Charts
@@ -32,10 +38,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
-  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
-  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
-  Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Underscore.m: dc9ca06fe2c9a79d01ce20c3d2c1e8f91f2d92dc
 
 PODFILE CHECKSUM: 862100460e1e8273f60b99427faf647919a59656
 
